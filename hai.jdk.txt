@@ -1,0 +1,9 @@
+public
+{
+
+
+public static void main (string[] arg);
+system.pringln("Hello")
+
+}
+}

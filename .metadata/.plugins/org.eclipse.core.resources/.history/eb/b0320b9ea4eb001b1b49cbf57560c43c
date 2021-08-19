@@ -1,0 +1,12 @@
+package Hai;
+
+import static org.junit.jupiter.api.Assertions.fail;
+
+class Test2 {
+
+	@BeforeTest
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

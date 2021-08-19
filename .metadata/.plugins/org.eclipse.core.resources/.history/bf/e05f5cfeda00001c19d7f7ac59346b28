@@ -1,0 +1,50 @@
+package com;
+
+import java.sql.Connection;
+import java.util.concurrent.TimeUnit;
+
+//import org.apache.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeTest;
+
+//import com.relevantcodes.extentreports.ExtentReports;
+//import com.relevantcodes.extentreports.ExtentTest;
+
+public class Config {
+
+	WebDriver driver = null;
+	Connection con = null;
+
+	@BeforeTest
+	public WebDriver openBrowser(String browser, String url) {
+
+		if (browser.equals("chrome")) {
+			System.setProperty("webdriver.chrome.driver",
+					"D:\\browser-drivers\\chromedriver_win32_2\\chromedriver.exe");
+
+			driver = new ChromeDriver();
+
+		} else if (browser.equals("firefox")) {
+			System.setProperty("webdriver.gecko.driver", "d:\\browser-drivers\\geckodriver.exe");
+
+			driver = new FirefoxDriver();
+
+		}
+
+		driver.navigate().to(url); // short way
+
+		driver.manage().window().maximize();
+
+		driver.manage().timeouts().implicitlyWait(40L, TimeUnit.SECONDS);
+
+		return driver;
+	}
+
+	public void closeBrowser() throws Exception {
+		driver.quit();
+
+	}
+
+}

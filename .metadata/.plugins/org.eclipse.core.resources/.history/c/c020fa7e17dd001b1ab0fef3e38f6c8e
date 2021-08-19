@@ -1,0 +1,14 @@
+package Pack;
+
+public class OutInClass {
+
+	void outmethod() {
+		System.out.println("This is the outer class");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

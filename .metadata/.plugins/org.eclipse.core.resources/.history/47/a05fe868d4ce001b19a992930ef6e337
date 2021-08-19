@@ -1,0 +1,16 @@
+import java.io.*;
+
+public class InputBufferReader {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		// TODO Auto-generated method stub
+		
+		 	InputStreamReader ir=new InputStreamReader(System.in);
+		 	BufferedReader br=new BufferedReader(ir);
+		 	int a =Integer.parseInt(br.readLine());
+		 	
+		 	
+
+	}
+
+}

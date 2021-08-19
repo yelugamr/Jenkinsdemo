@@ -1,0 +1,22 @@
+
+public class Variable {
+
+	
+	 int a=10;  //this is a instance variable which is delared out side of the method and inside of the class
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int b=30;
+		System.out.println(b);
+		Variable var=new Variable();
+		var.a;
+	System.out.println(a);
+	
+
+		
+
+	}
+
+}

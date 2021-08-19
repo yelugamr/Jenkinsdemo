@@ -1,0 +1,26 @@
+
+public class Variable {
+
+	
+	  //this is a instance variable which is delared out side of the method and inside of the class
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+
+	
+	} 
+
+
+	private static void indexof(String str) {
+		// TODO Auto-generated method stub
+		
+		String str1=new String();
+		
+		
+		
+		
+	}
+
+}

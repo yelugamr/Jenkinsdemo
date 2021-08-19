@@ -1,0 +1,14 @@
+import java.sql.Connection;
+
+public class DemoInsert extends Connect {
+
+	public void insertdata() throws Exception {
+		Connection con = makeConnection("");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,17 @@
+import java.sql.Connection;
+import java.sql.Statement;
+
+public class DemoSelect extends Connect {
+
+	public void selectdata() throws Exception {
+		Connection con = makeConnection("D:\\corejava\\Test.xlsx");
+		
+		Statement stm = con.createStatement();
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,19 @@
+import java.sql.*;
+
+public class Connect {
+	
+	Connection con = null;
+	
+	public Connection makeConnection(String wb) throws Exception
+	{
+		// Register Driver
+		Class.forName("com.googlecode.sqlsheet.Driver");
+
+		// Connect to Excel – xls format only
+
+	con = DriverManager.getConnection("jdbc:xls:file:C:\\Book1.xls");
+
+	return con;
+	}
+
+}

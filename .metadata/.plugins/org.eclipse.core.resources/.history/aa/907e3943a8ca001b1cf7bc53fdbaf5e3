@@ -1,0 +1,21 @@
+
+public class Assignment1
+{
+
+	public static void main(String[] args)
+	{
+		
+	 int x=119;
+	
+	int numb =x/2;
+	if (numb==1)
+	{
+		System.out.println("This is a odd number ");
+	}
+	else 
+	{
+		System.out.println("This is a even number ");
+	}
+	}
+
+}

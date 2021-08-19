@@ -1,0 +1,41 @@
+import java.sql.Connection;
+import java.sql.Statement;
+
+import org.apache.log4j.Logger;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+
+public class TestInsert extends ConfigN {
+
+	public Logger logs = null;
+
+	public ExtentTest test = null;
+
+	public ExtentReports report = null;
+
+	Connection con = null;
+
+	public void getconnected() throws Exception {
+
+		logs = Logger.getLogger("insertlogger");
+
+		Connection con = makeConnection("D:\\corejava\\insar.xls");
+		Statement stm = con.createStatement();
+		logs.debug("Connected to excel");
+		stm.executeUpdate("insert into Sheet1(user1,password) values('Rakesh','hai1')");
+		logs.debug("Query was excuted");
+		con.commit();
+		con.close();
+
+		System.out.println("inserted");
+		logs.debug("Query was printed");
+	}
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		TestInsert insert = new TestInsert();
+		insert.getconnected();
+	}
+
+}
